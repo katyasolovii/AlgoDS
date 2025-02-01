@@ -11,16 +11,18 @@ T(n) <= T(n - 1) + O(1) = T(n - 1) + C <=
 d)
 
 T(n) = | O(1),               n <= a, a > 1
-       | aT(n - 1) + O(1),   n > a
+       | aT(n - a) + O(1),   n > a
 
-T(n) <= aT(n - 1) + C <=
-    <= a(aT(n - 2) + C) + C =
-    = a^2 T(n - 2) + C(a + 1) <=
-    <= a^2(aT(n - 3) + C) + C(a + 1) =
-    = a^3 T(n - 3) + C(a^2 + a + 1) <= 
-    <= a^n T(n - n) + C(a^(n-1) + a^(n - 2) + a^(n - n)) <= 
-    <= C a^n + C sum{i=0}_{n - 1} a^i =
-    = C a^n + C (1 - a^n)/(1 - a) = O(a^n)
+n - ma <= a -> ma = a - n <= a -> m = n/a - 1
+
+T(n) <= aT(n - a) + C <=
+    <= a(aT(n - 2a) + C) + C =
+    = a^2 T(n - 2a) + C(a + 1) <=
+    <= a^2(aT(n - 3a) + C) + C(a + 1) =
+    = a^3 T(n - 3a) + C(a^2 + a + 1) <= 
+    <= a^m T(n - ma) + C(a^(m-1) + a^(m-2) + a^(m-m)) <= 
+    <= C a^(n/a-1) + C sum{i=0}_{m-1} a^i =
+    = C a^(n/a-1) + C (1 - a^(n/a - 1))/(1 - a) = O(a^(n/a))
 
 g) 
 
