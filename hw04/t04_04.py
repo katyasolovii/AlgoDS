@@ -18,4 +18,4 @@ def solve(f, c, a, b):
         m = (left + right) / 2.0
     return m
 
-print(solve(f, 0, 1.6, 3.0))
+print(solve(f, 0, 1.6, 3.0)) #res: 2.278862660075828

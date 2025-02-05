@@ -17,4 +17,4 @@ def solve(f, c, a, b):
         m = (left + right) / 2.0
     return m 
 
-print(solve(f, 5, 0, 10))
+print(solve(f, 5, 0, 10)) #res: 1.3787967001295511
