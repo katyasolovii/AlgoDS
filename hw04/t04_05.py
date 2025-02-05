@@ -18,3 +18,4 @@ def solve(f, a, b):
     return m
 
 print(solve(f, 0, 2)) #res: 1.0
+
