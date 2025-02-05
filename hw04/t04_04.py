@@ -19,3 +19,4 @@ def solve(f, c, a, b):
     return m
 
 print(solve(f, 0, 1.6, 3.0)) #res: 2.278862660075828
+ 
