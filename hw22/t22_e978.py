@@ -1,6 +1,7 @@
 from collections import deque
 
 class Graph:
+
     def __init__(self, n):
         self.n = n
         self.vertices = {i: set() for i in range(1, n + 1)}
@@ -9,7 +10,6 @@ class Graph:
         self.vertices[u].add(v)
         self.vertices[v].add(u)
     
-
     def bfs(self, start):
         visited = set()
         queue = deque()
@@ -24,7 +24,6 @@ class Graph:
                     visited.add(neighbour)
                     res.append((u, neighbour))
                     queue.append(neighbour)
-        
         return res
                 
 
