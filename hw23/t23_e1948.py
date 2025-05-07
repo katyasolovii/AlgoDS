@@ -1,5 +1,6 @@
 import sys
-sys.setrecursionlimit(2 * 10**5)
+sys.setrecursionlimit(10**5)
+
 # WHITE = 0
 # GRAY = 1
 # BLACK = 2
