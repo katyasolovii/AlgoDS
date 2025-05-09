@@ -1,11 +1,6 @@
 from collections import deque
 
-def solve(n, edges):
-    graph = [[]] * (n + 1)
-    for u, v in edges:
-        graph[u].append(v)
-        graph[v].append(u)
-
+def solve(n, graph):
     visited = [0] * (n + 1)
     components = []
     
@@ -34,8 +29,9 @@ if __name__ == '__main__':
     with open("input.txt") as f:
         lines = f.readlines()
         n, m = map(int, lines[0].split())
-        edges = []
+        graph = [[] for _ in range(n+1)]
         for i in range(1, m + 1):
             u, v = map(int, lines[i].split())
-            edges.append((u, v))
-    solve(n, edges)
+            graph[u].append(v)
+            graph[v].append(u)
+    solve(n, graph)
