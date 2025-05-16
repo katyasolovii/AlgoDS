@@ -1,5 +1,3 @@
-"алгоритм Беллмана-Форда"
-
 import sys
 
 INF = sys.maxsize
